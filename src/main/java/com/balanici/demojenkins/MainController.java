@@ -12,8 +12,16 @@ public class MainController {
 
     @GetMapping("/method-1")
     public ResponseEntity<ResponseModel> getMethod1() {
-        ResponseModel responseModel = new ResponseModel("Helo from method 1", 200);
+        ResponseModel responseModel = new ResponseModel("Hello from method 1", 201);
 
         return new ResponseEntity<>(responseModel, HttpStatus.OK);
+    }
+
+    @GetMapping("/method-2")
+    public ResponseEntity<ResponseModel> getMethod2() {
+        ResponseModel responseModel = new ResponseModel("Hello from method 2", 202);
+
+        return new ResponseEntity<>(responseModel, HttpStatus.OK);
+
     }
 }
