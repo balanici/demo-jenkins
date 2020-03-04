@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh './mvnw clean package -DskipTests'
+                /*sh './mvnw clean package -DskipTests'*/
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh './mvnw test'
+                /*sh './mvnw test'*/
             }
         }
         stage('Deploy') {
