@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=pMO26j2OUME&feature=youtu.be - jenkins tutorial
+https://www.youtube.com/watch?v=tuxO7ZXplRE  2/4 part
+
+
+
+notes
+docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+then run docker logs to find admin pass for jenkins
+
+then add a multibranch pipeline job
+discover branches filter all by regexpression
+build config leave default: build by jenkins file
+
+add credentials, because jenkins wants creds to access github
+    add system and global creds
+then got to job -> credentials, and add credentials - this is for job
+
+add branches to discover: ^develop|master$
+
+add jenkinsfile, now declarative,, not scripting
+
+you can replay your jenkinsfile for every branch
+
+Scan Multibranch Pipeline Triggers - for scan scm changes periodically
